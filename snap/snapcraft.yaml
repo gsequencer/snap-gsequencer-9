@@ -6,14 +6,13 @@ description: |
   notation, automation and wave form editor. Supporting LADSPA, DSSI
   and LV2 plugins.
 icon: snap/local/ags.png
-uses: samuelmeuli/action-snapcraft@v2.1.1
 
 base: core24
 grade: stable
 confinement: strict
 
 parts:
-  gsequencer-8:
+  gsequencer-9:
     source: https://download-mirror.savannah.gnu.org/releases/gsequencer/9.0.x/gsequencer-9.0.4.tar.gz # See 'snapcraft plugins'
     plugin: autotools
     build-packages: [wget,fop,libportal-gtk4-dev,libinstpatch-dev,libsndfile-dev,libsamplerate-dev,ladspa-sdk,dssi-dev,lv2-dev,libfftw3-dev,libasound2-dev,libjack-jackd2-dev,uuid-dev,libcunit1-dev,docbook-xsl,docbook-xml,gtk-doc-tools,xsltproc]
@@ -37,7 +36,7 @@ slots:
     name: org.nongnu.gsequencer.gsequencer
 
 apps:
-  gsequencer-8:
+  gsequencer-9:
     command: snap/bin/gsequencer
     extensions: [gnome]
     desktop: snap/share/applications/gsequencer.desktop
