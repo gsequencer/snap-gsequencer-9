@@ -1,0 +1,82 @@
+name: gsequencer-9
+version: '9.0.4'
+summary: Advanced Gtk+ Sequencer
+description: |
+  GSequencer is intended to be use for music composition. It features
+  notation, automation and wave form editor. Supporting LADSPA, DSSI
+  and LV2 plugins.
+icon: snap/local/ags.png
+
+base: core24
+grade: stable
+confinement: strict
+
+parts:
+  gsequencer-8:
+    source: https://download-mirror.savannah.gnu.org/releases/gsequencer/9.0.x/gsequencer-9.0.4.tar.gz # See 'snapcraft plugins'
+    plugin: autotools
+    build-packages: [wget,fop,libportal-gtk4-dev,libinstpatch-dev,libsndfile-dev,libsamplerate-dev,ladspa-sdk,dssi-dev,lv2-dev,libfftw3-dev,libasound2-dev,libjack-jackd2-dev,uuid-dev,libcunit1-dev,docbook-xsl,docbook-xml,gtk-doc-tools,xsltproc]
+    stage-packages: [libportal-gtk4-1,libinstpatch-1.0-2,libfftw3-double3,libfftw3-single3,libsndfile1,libsamplerate0,ubuntustudio-audio-plugins,cmt,xsynth-dssi,calf-plugins,invada-studio-plugins-lv2,swh-plugins,mda-lv2,hydrogen-drumkits,fluid-soundfont-gm,fluid-soundfont-gs]
+    override-build: |
+      ./configure --prefix=/snap --enable-public-libgsequencer --enable-snap-sandbox --with-poppler --with-gtk-unix-print --disable-introspection
+      make -j $SNAPCRAFT_PARALLEL_BUILD_COUNT
+      make -j1 pdf
+      DESTDIR=$CRAFT_PART_INSTALL make -j1 install
+      DESTDIR=$CRAFT_PART_INSTALL make -j1 install-pdf-mkdir
+      DESTDIR=$CRAFT_PART_INSTALL make -j1 install-pdf
+      rm -rf $CRAFT_PART_INSTALL/snap/include
+    override-pull: |
+      snapcraftctl pull
+      autoreconf -fi
+
+slots:
+  dbus-daemon:
+    interface: dbus
+    bus: session
+    name: org.nongnu.gsequencer.gsequencer
+
+apps:
+  gsequencer-8:
+    command: snap/bin/gsequencer
+    extensions: [gnome]
+    desktop: snap/share/applications/gsequencer.desktop
+    common-id: org.nongnu.gsequencer.gsequencer
+    environment:
+      LD_LIBRARY_PATH: $LD_LIBRARY_PATH:$SNAP/snap/lib
+      XDG_DATA_DIRS: $SNAP/snap/share:$XDG_DATA_DIRS
+      LADSPA_PATH: $SNAP/usr/lib/ladspa
+      DSSI_PATH: $SNAP/usr/lib/dssi
+      LV2_PATH: $SNAP/usr/lib/lv2
+      AGS_SNAP_PATH: $SNAP
+      AGS_ANIMATION_FILENAME: $SNAP/snap/share/gsequencer/images/gsequencer-800x450.png
+      AGS_LOGO_FILENAME: $SNAP/snap/share/gsequencer/images/ags.png
+      AGS_CSS_FILENAME: $SNAP/snap/share/gsequencer/styles/ags.css
+      AGS_ONLINE_HELP_PDF_FILENAME: $SNAP/snap/share/doc/gsequencer/pdf/user-manual-a4.pdf
+    slots:
+      - dbus-daemon
+    plugs:
+      - x11
+      - wayland
+      - desktop
+      - alsa
+      - pulseaudio
+      - audio-playback
+      - audio-record
+      - jack1
+      - gsettings
+      - home
+      - dot-gsequencer
+      - icon-themes
+      - openvswitch
+      - cups
+
+plugs:
+  icon-themes:
+    interface: content
+    target: $SNAP/snap/share/icons
+    default-provider: gtk-common-themes:icon-themes
+  dot-gsequencer:
+    interface: personal-files
+    write:
+    - $HOME/.gsequencer/ags.conf
+    - $HOME/.gsequencer/priority.conf
