@@ -15,8 +15,8 @@ parts:
   gsequencer-9:
     source: https://download-mirror.savannah.gnu.org/releases/gsequencer/9.0.x/gsequencer-9.0.4.tar.gz # See 'snapcraft plugins'
     plugin: autotools
-    build-packages: [wget,fop,libportal-gtk4-dev,libinstpatch-dev,libsndfile-dev,libsamplerate-dev,ladspa-sdk,dssi-dev,lv2-dev,libfftw3-dev,libasound2-dev,libjack-jackd2-dev,uuid-dev,libcunit1-dev,docbook-xsl,docbook-xml,gtk-doc-tools,xsltproc]
-    stage-packages: [libportal-gtk4-1,libinstpatch-1.0-2,libfftw3-double3,libfftw3-single3,libsndfile1,libsamplerate0,cmt,xsynth-dssi,calf-plugins,invada-studio-plugins-lv2,swh-plugins,mda-lv2,hydrogen-drumkits,fluid-soundfont-gm,fluid-soundfont-gs]
+    build-packages: [wget,fop,libinstpatch-dev,libsndfile-dev,libsamplerate-dev,ladspa-sdk,dssi-dev,lv2-dev,libfftw3-dev,libasound2-dev,libjack-jackd2-dev,uuid-dev,libcunit1-dev,docbook-xsl,docbook-xml,gtk-doc-tools,xsltproc]
+    stage-packages: [libinstpatch-1.0-2,libfftw3-double3,libfftw3-single3,libsndfile1,libsamplerate0,cmt,xsynth-dssi,calf-plugins,invada-studio-plugins-lv2,swh-plugins,mda-lv2,hydrogen-drumkits,fluid-soundfont-gm,fluid-soundfont-gs]
     override-build: |
       ./configure --prefix=/snap --enable-public-libgsequencer --enable-snap-sandbox --with-poppler --with-gtk-unix-print --disable-introspection
       make -j $SNAPCRAFT_PARALLEL_BUILD_COUNT
@@ -28,6 +28,21 @@ parts:
     override-pull: |
       snapcraftctl pull
       autoreconf -fi
+    prime:
+      - -usr/share/lintian/*
+      - -usr/share/man/*
+      - -usr/share/themes/*
+      - -usr/share/icons/*
+      - -usr/share/fonts/*
+      - -usr/share/fontconfig/*
+      - -usr/share/doc/*
+      - -usr/share/calf/*
+      - -usr/lib/*
+      - -usr/bin/*
+      - usr/bin/gsequencer
+      - usr/bin/midi2xml
+      - usr/lib/libags*
+      - usr/lib/libgsequencer*
 
 slots:
   dbus-daemon:
