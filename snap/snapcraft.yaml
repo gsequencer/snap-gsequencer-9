@@ -25,7 +25,8 @@ parts:
       DESTDIR=$CRAFT_PART_INSTALL make -j1 install-pdf-mkdir
       DESTDIR=$CRAFT_PART_INSTALL make -j1 install-pdf
       rm -rf $CRAFT_PART_INSTALL/snap/include
-      install -c -p -m 644 gsequencer.desktop $CRAFT_PART_INSTALL/snap/share/applications/
+      mkdir -p $CRAFT_PART_INSTALL/snap/share/applications/
+      install -c -p -m 644 gsequencer.desktop $CRAFT_PART_INSTALL/snap/share/applications/gsequencer.desktop
     override-pull: |
       snapcraftctl pull
       autoreconf -fi
