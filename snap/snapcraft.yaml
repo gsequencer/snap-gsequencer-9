@@ -41,7 +41,7 @@ parts:
       - usr/lib/$CRAFT_ARCH_TRIPLET/libasound*
       - usr/lib/$CRAFT_ARCH_TRIPLET/libasyncns*
       - usr/lib/$CRAFT_ARCH_TRIPLET/libdatrie*
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libdecor-0*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libdecor*
       - usr/lib/$CRAFT_ARCH_TRIPLET/libdeflate*
       - usr/lib/$CRAFT_ARCH_TRIPLET/libfftw3*
       - usr/lib/$CRAFT_ARCH_TRIPLET/libfftw3_omp*
@@ -54,73 +54,37 @@ parts:
       - usr/lib/$CRAFT_ARCH_TRIPLET/libgomp*
       - usr/lib/$CRAFT_ARCH_TRIPLET/libgraphite2*
       - usr/lib/$CRAFT_ARCH_TRIPLET/libgsm*
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libinstpatch-1.0.so.2
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libinstpatch-1.0.so.2.2.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libjack.so.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libjack.so.0.1.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libjacknet.so.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libjacknet.so.0.1.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libjackserver.so.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libjackserver.so.0.1.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libjbig.so.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libjpeg.so.8
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libjpeg.so.8.2.2
-      - usr/lib/$CRAFT_ARCH_TRIPLET/liblo.so.7
-      - usr/lib/$CRAFT_ARCH_TRIPLET/liblo.so.7.4.1
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libmp3lame.so.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libmp3lame.so.0.0.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libmpg123.so.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libmpg123.so.0.48.2
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libogg.so.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libogg.so.0.8.5
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libopus.so.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libopus.so.0.9.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libpango-1.0.so.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libpango-1.0.so.0.5200.1
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libpangocairo-1.0.so.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libpangocairo-1.0.so.0.5200.1
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libpangoft2-1.0.so.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libpangoft2-1.0.so.0.5200.1
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libpipewire-0.3.so.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libpipewire-0.3.so.0.1005.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libpixman-1.so.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libpixman-1.so.0.42.2
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libpulse-simple.so.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libpulse-simple.so.0.1.1
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libpulse.so.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libpulse.so.0.24.2
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libsamplerate.so.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libsamplerate.so.0.2.2
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libsensors.so.5
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libsensors.so.5.0.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libsharpyuv.so.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libsharpyuv.so.0.0.1
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libsndfile.so.1
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libsndfile.so.1.0.37
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libthai.so.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libthai.so.0.3.1
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libtiff.so.6
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libtiff.so.6.0.1
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libvorbis.so.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libvorbis.so.0.4.9
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libvorbisenc.so.2
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libvorbisenc.so.2.0.12
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libwayland-client.so.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libwayland-client.so.0.22.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libwayland-cursor.so.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libwayland-cursor.so.0.22.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libwayland-egl.so.1
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libwayland-egl.so.1.22.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libwebp.so.7
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libwebp.so.7.1.8
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libwebrtc_audio_processing.so.1
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libwebrtc_audio_processing.so.1.0.0
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libxml2.so.2
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libxml2.so.2.9.14
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libxshmfence.so.1
-      - usr/lib/$CRAFT_ARCH_TRIPLET/libxshmfence.so.1.0.0
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libinstpatch*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libjack*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libjacknet*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libjackserver*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libjbig*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libjpeg*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/liblo*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libmp3lame*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libmpg123*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libogg*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libopus*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libpipewire*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libpixman-1*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libpulse-simple*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libpulse*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libsamplerate*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libsensors*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libsharpyuv*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libsndfile*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libthai*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libtiff*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libvorbis*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libvorbisenc*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libwayland-client*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libwayland-cursor*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libwayland-egl*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libwebp*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libwebrtc_audio_processing*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libxml2*
       - usr/lib/$CRAFT_ARCH_TRIPLET/pulseaudio
-      - usr/lib/$CRAFT_ARCH_TRIPLET/pulseaudio/libpulsecommon-16.1.so
+      - usr/lib/$CRAFT_ARCH_TRIPLET/pulseaudio/libpulsecommon*
       - -etc/X11/*
       - -etc/fonts/*
       - -etc/gtk-2.0/*
@@ -175,6 +139,9 @@ parts:
       - -usr/lib/$CRAFT_ARCH_TRIPLET/libicutest*
       - -usr/lib/$CRAFT_ARCH_TRIPLET/libicutu*
       - -usr/lib/$CRAFT_ARCH_TRIPLET/libicuuc*
+      - -usr/lib/$CRAFT_ARCH_TRIPLET/libpango-1.0*
+      - -usr/lib/$CRAFT_ARCH_TRIPLET/libpangocairo-1.0*
+      - -usr/lib/$CRAFT_ARCH_TRIPLET/libpangoft2-1.0*
       - -usr/lib/$CRAFT_ARCH_TRIPLET/libxcb-dri3*
       - -usr/lib/$CRAFT_ARCH_TRIPLET/libxcb-present*
       - -usr/lib/$CRAFT_ARCH_TRIPLET/libxcb-randr*
@@ -183,6 +150,7 @@ parts:
       - -usr/lib/$CRAFT_ARCH_TRIPLET/libxcb-sync*
       - -usr/lib/$CRAFT_ARCH_TRIPLET/libxcb-xfixes*
       - -usr/lib/$CRAFT_ARCH_TRIPLET/libxcb*
+      - -usr/lib/$CRAFT_ARCH_TRIPLET/libxshmfence*
       - -usr/bin/X11
       - -usr/bin/calfjackhost
       - -usr/bin/fc*
