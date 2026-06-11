@@ -35,6 +35,8 @@ parts:
       - snap/bin/midi2xml
       - snap/lib/libags*
       - snap/lib/libgsequencer*
+      - snap/share/gsequencer/*
+      - snap/share/doc/gsequencer/*
       - snap/share/applications/gsequencer.desktop
       - usr/lib/ladspa/*
       - usr/lib/dssi/*
