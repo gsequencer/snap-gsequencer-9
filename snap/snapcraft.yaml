@@ -38,6 +38,7 @@ parts:
       - -usr/share/doc/*
       - -usr/share/calf/*
       - -usr/lib/*
+      - -usr/lib/**
       - -usr/bin/*
       - usr/bin/gsequencer
       - usr/bin/midi2xml
