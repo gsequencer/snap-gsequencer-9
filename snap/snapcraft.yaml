@@ -73,6 +73,7 @@ parts:
       - usr/lib/$CRAFT_ARCH_TRIPLET/libpulse-simple*
       - usr/lib/$CRAFT_ARCH_TRIPLET/libpulse*
       - usr/lib/$CRAFT_ARCH_TRIPLET/libsamplerate*
+      - usr/lib/$CRAFT_ARCH_TRIPLET/libSDL2-2.0*
       - usr/lib/$CRAFT_ARCH_TRIPLET/libsensors*
       - usr/lib/$CRAFT_ARCH_TRIPLET/libsharpyuv*
       - usr/lib/$CRAFT_ARCH_TRIPLET/libsndfile*
@@ -108,7 +109,6 @@ parts:
       - -usr/lib/$CRAFT_ARCH_TRIPLET/libatk*
       - -usr/lib/$CRAFT_ARCH_TRIPLET/libLLVM*
       - -usr/lib/$CRAFT_ARCH_TRIPLET/libLerc*
-      - -usr/lib/$CRAFT_ARCH_TRIPLET/libSDL2-2.0*
       - -usr/lib/$CRAFT_ARCH_TRIPLET/libX11-xcb*
       - -usr/lib/$CRAFT_ARCH_TRIPLET/libX11*
       - -usr/lib/$CRAFT_ARCH_TRIPLET/libXau*
