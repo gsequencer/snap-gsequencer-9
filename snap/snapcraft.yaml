@@ -43,6 +43,9 @@ parts:
       - usr/bin/midi2xml
       - usr/lib/libags*
       - usr/lib/libgsequencer*
+      - usr/lib/ladspa/*
+      - usr/lib/dssi/*
+      - usr/lib/lv2/*
 
 slots:
   dbus-daemon:
