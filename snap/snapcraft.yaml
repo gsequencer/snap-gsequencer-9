@@ -59,22 +59,16 @@ apps:
       - wayland
       - desktop
       - alsa
-      - pulseaudio
       - audio-playback
       - audio-record
       - jack1
       - gsettings
       - home
       - dot-gsequencer
-      - icon-themes
       - openvswitch
       - cups
 
 plugs:
-  icon-themes:
-    interface: content
-    target: $SNAP/snap/share/icons
-    default-provider: gtk-common-themes:icon-themes
   dot-gsequencer:
     interface: personal-files
     write:
