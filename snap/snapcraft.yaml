@@ -29,10 +29,10 @@ parts:
       snapcraftctl pull
       autoreconf -fi
     prime:
-      - $CRAFT_PART_INSTALL/bin/gsequencer
-      - $CRAFT_PART_INSTALL/bin/midi2xml
-      - $CRAFT_PART_INSTALL/lib/libags*
-      - $CRAFT_PART_INSTALL/lib/libgsequencer*
+      - snap/bin/gsequencer
+      - snap/bin/midi2xml
+      - snap/lib/libags*
+      - snap/lib/libgsequencer*
       - usr/lib/ladspa/*
       - usr/lib/dssi/*
       - usr/lib/lv2/*
