@@ -1,5 +1,5 @@
 name: gsequencer-9
-version: '9.0.6'
+version: '9.0.22'
 summary: Advanced Gtk+ Sequencer
 description: |
   GSequencer is intended to be use for music composition. It features
@@ -13,7 +13,7 @@ confinement: strict
 
 parts:
   gsequencer-9:
-    source: https://download-mirror.savannah.gnu.org/releases/gsequencer/9.0.x/gsequencer-9.0.6.tar.gz # See 'snapcraft plugins'
+    source: https://download-mirror.savannah.gnu.org/releases/gsequencer/9.0.x/gsequencer-9.0.22.tar.gz # See 'snapcraft plugins'
     plugin: autotools
     build-packages: [wget,fop,libinstpatch-dev,libsndfile-dev,libsamplerate-dev,ladspa-sdk,dssi-dev,lv2-dev,libfftw3-dev,libasound2-dev,libjack-jackd2-dev,uuid-dev,libcunit1-dev,docbook-xsl,docbook-xml,gtk-doc-tools,xsltproc]
     stage-packages: [libinstpatch-1.0-2,libfftw3-double3,libfftw3-single3,libsndfile1,libsamplerate0,cmt,xsynth-dssi,calf-plugins,invada-studio-plugins-lv2,swh-plugins,mda-lv2,hydrogen-drumkits,fluid-soundfont-gm,fluid-soundfont-gs]
